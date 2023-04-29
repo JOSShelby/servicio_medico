@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+}
+.pagina{
+    background-color: rgb(202, 204, 204);
+    width: 100%;
+    height: 100%;
+}
+.reloj{
+    color: #ffffff;
+    margin: 0 ;
+    margin-right: 70px;
+    margin-top: 60px;
+    position: absolute;
+    font-size: 25px;
+    font-family: Arial;
+}
+.dia{
+    color: #ffffff;
+    margin: 0;
+    margin-right: 70px;
+    margin-top: 30px;
+    position: absolute;
+    font-size: 25px;
+    font-family: Arial;
+}
+.rectangulo_encabezado{
+    margin: 0;
+    position: absolute;
+    background-color: #0a6e0e;
+    width: 100%;
+    height: 130px;
+    box-shadow: 0 .5vw #999;
+}
+.Titulo{
+    color: rgb(255, 255, 255);
+    font-family: Arial Black; 
+    text-align: center;
+    font-size: 40px;
+    text-shadow: .1vw 0 #000, 0 .1vw #000, .1vw 0 #000, 0 .1vw #000;
+    position: relative;
+    margin-top: 1%;
+}
+.Indicaciones{
+    color: #fff;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+.BTNVolver{
+    text-align: center;
+    margin-top: 150px;
+    margin-right: 40px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0a6e0e;
+    border: none;
+    border-radius: 1vw;
+    box-shadow: 0 .5vw #999;
+    position: absolute;
+    width: 50px;
+    height: 40px;
+}
+.BTNVolver:hover{
+    background-color: #024f05;
+    animation: pulse 15s;
+    outline-offset: 80px;
+    text-shadow: 1px 1px 7px #fff;
+    box-shadow: 0 .5vw #999;
+}
+.separador{
+    width: 100%;
+    height: 200px;
+}
+.separador2{
+    width: 100%;
+    height: 50px;
+}
+.BTNExcel{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0a6e0e;
+    border: none;
+    border-radius: 1vw;
+    box-shadow: 0 .5vw #999;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    text-decoration: none;
+}
+.BTNExcel:hover{
+    background-color: #024f05;
+    animation: pulse 15s;
+    outline-offset: 80px;
+    text-shadow: 1px 1px 7px #fff;
+    box-shadow: 0 .5vw #999;
+}
+.BTNBuscar{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0a6e0e;
+    border: none;
+    border-radius: 1vw;
+    box-shadow: 0 .5vw #999;
+    position: relative;
+    width: 250px;
+    height: 40px;
+    text-decoration: none;
+}
+.Label1{
+    margin-top: 1vw;
+    color: rgb(105, 107, 107);
+    text-align: end;
+    font-size: 20px;
+    width: 25%;
+    margin-left: 0;
+}
+.inputs{
+    margin-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 15px;
+    height:25px;
+    width: 40%;
+    text-align: center;
+    margin-right: 25%;
+    margin-left: 0%;
+
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color:rgb(202, 204, 204);
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+  }
+  
+  .inputs:focus {
+    background-color: #0a6e0e;
+    color: white;
+    box-shadow: 13px 13px 100px #969696,
+               -13px -13px 100px #ffffff;
+  }
+.encab_negro{
+    color: rgb(255, 255, 255);
+    background: #000;
+}
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 25px #ffffff, 0 0 50px #ffffff;
+    }
+}
+
+.button {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-top: 40px;
+    text-decoration: none;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #0a6e0e;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 .5vw #999;
+    border-radius: 1vw;
+  }
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(22px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #08570b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 20px;
+    fill: #fff;
+  }
+  
+  .button:hover {
+    background: #0a6e0e;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #0a6e0e;
+  }
+  
+  .button:active {
+    border: 1px solid #0a6e0e;
+  }
+  .imgFiltro{
+    filter: invert(100%);
+  }
+  .imgPitido{
+    opacity: 5%;
+    position: absolute;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
