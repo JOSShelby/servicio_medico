@@ -223,11 +223,14 @@ function validaCamposEditar(){
 function buscarPaciente(){
     var formulario = document.getElementById("frmConsultar");
     var fecha = formulario.idFecha.value;
+    var fechaFin = formulario.idFechaFin.value;
+    console.log('fecha inicio: '+fecha);
+    console.log('fecha fin: '+fechaFin);
     var nombre = formulario.idNombre.value;
     var edad = formulario.idEdad.value;
     var genero = formulario.idGenero.value;
 
-    if(fecha=="" && nombre=="" && edad=="" && genero==""){
+    if(fecha=="" && nombre=="" && edad=="" && genero=="" && fechaFin==""){
         // swal("¡ERROR!", "INGRESE LOS DATOS MINIMOS PARA LA BUSQUEDA", "error");
         var tablaPacientes = document.getElementById("idTablaPacientes");
         var contenidoTablaPacientes = "";
@@ -236,7 +239,7 @@ function buscarPaciente(){
         const options = {
             method: "GET",
         }; 
-        fetch("../php/consultar_por_filtro.php?fecha="+fecha+"&nombre="+nombre+"&edad="+edad+"&genero="+genero, options)
+        fetch("../php/consultar_por_filtro.php?fecha="+fecha+"&nombre="+nombre+"&edad="+edad+"&genero="+genero+"&fechaFin="+fechaFin, options)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
@@ -297,6 +300,10 @@ function buscarPaciente(){
                     tablaOculta.innerHTML = contenidoTablaPacientes1;
                 }else{
                     swal("¡ERROR!", "NO SE ENCONTRARON PACIENTES CON ESOS DATOS", "error");
+                    document.getElementById("frmConsultar").reset();
+                    var tablaPacientes = document.getElementById("idTablaPacientes");
+                    var contenidoTablaPacientes = "";
+                    tablaPacientes.innerHTML = contenidoTablaPacientes;
                 }  
             })
     }

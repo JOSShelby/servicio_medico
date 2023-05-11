@@ -43,8 +43,14 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col">
-                        <label class="Label1">Fecha</label>
+                        <label class="Label1">Fecha Inicio</label>
                         <input id="idFecha" title="INGRESA FECHA A BUSCAR" name="fecha" type="date" class="inputs" onchange="buscarPaciente()" value="<?php //echo date("Y-m-d");?>">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="Label1">Fecha Fin</label>
+                        <input id="idFechaFin" title="INGRESA FECHA A BUSCAR" name="fechaFin" type="date" class="inputs" onchange="buscarPaciente()" value="<?php //echo date("Y-m-d");?>">
                     </div>
                 </div>
                 <div class="row">
